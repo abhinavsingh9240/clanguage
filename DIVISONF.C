@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<conio.h>
+void main(){
+int p;
+clrscr();
+printf("\nEnter the percentage:\t");
+scanf("%d",&p);
+if(p>100)
+	printf("False Percentage\nPress enter to exit");
+
+else
+{	if (p>=80)
+		printf("First DIvision");
+	else if(p>45 && p<=80)
+		printf("Second Divison");
+	else if(p>33 &&p<=45)
+		printf("Third Divison");
+	else
+		printf("Fail");
+
+}
+getch();
+}

@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<conio.h>
+void main(){
+int a,b,ans;
+char c;
+clrscr();
+printf("\nEnter the no.s:\t");
+scanf("%d%d",&a,&b);
+printf("\nEnter the operator:\t");
+fflush(stdin);
+scanf("%c",&c);
+if (c=='+'){
+	 ans=a+b;
+	 printf("%d%c%d=%d",a,c,b,ans);
+	 }
+else if (c=='-'){
+	ans=a-b;
+	printf("%d%c%d=%d",a,c,b,ans);
+	}
+else if (c=='/'){
+	ans=a/b;
+	printf("%d%c%d=%d",a,c,b,ans);
+	}
+else if(c=='*'){
+	ans=a*b;
+	printf("%d%c%d=%d",a,c,b,ans);
+	}
+else if (c=='%'){
+	ans=a%b;
+	printf("%d%c%d=%d",a,c,b,ans);
+	}
+else
+	printf("invalid operator");
+getch();
+}

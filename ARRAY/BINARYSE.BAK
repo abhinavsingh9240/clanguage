@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<conio.h>
+void bsearch(int[],int,int);
+void main()
+{
+	int x[50],n,ele,i;
+	clrscr();
+	printf("Enter the length of array:\t");
+	scanf("%d",&n);
+	if(n<=50)
+	{
+		printf("enter the array:\n");
+		for(i=0;i<n;i++)
+			scanf("%d",&x[i]);
+		printf("Enter the element you want to search:\t");
+		scanf("%d",&ele);
+		bsearch(x,n,ele);
+	}
+	else
+		printf("Length is out of range");
+
+	getch();
+}
+void bsearch(int ar[],int n,int ele)
+{
+
+	int x=0,mid=-1,y=n-1,f=-1;
+	while(x<y)
+	{       printf("\n\nx= %d and y= %d and mid= %d\n\n",x,y,mid);
+		mid=(x+y)/2;
+		if(ar[mid]==ele)
+		 {	f=mid; break;}
+		else if(ar[mid]<ele)
+			x=mid;
+		else if(ar[mid]>ele)
+			y=mid-1;
+	}
+	if(f==-1)
+		printf("element not found");
+	else
+		printf("element found at %d-index",f);
+
+
+}

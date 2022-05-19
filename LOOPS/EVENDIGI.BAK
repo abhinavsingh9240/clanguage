@@ -1,0 +1,18 @@
+#include<conio.h>
+#include<stdio.h>
+//This program is for sum of even digits in the number
+void main(){
+int a,n,s=0;
+clrscr();
+printf("enter the number:\t");
+scanf("%d",&a);
+while(a>0){
+	n=a%10;
+	if(n%2==0)
+		s+=n;
+	a/=10;
+
+	}
+printf("The sum of even is %d",s);
+getch();
+}

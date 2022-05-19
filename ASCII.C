@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int a;
+	char ch;
+	clrscr();
+	printf("Enter the charactrer:\t");
+	scanf("%c",&ch);
+	printf("ASCII CODE of %c is %d",ch,ch);
+	a=ch;
+	printf("\nASCII code:\t%d",a);
+	getch();
+}

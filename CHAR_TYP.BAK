@@ -1,0 +1,8 @@
+#include<stdin.h>
+#include<conio.h>
+void main()
+{
+	char ch;
+	printf("Enter the character:\t");
+	scanf("%c",&ch);
+	if

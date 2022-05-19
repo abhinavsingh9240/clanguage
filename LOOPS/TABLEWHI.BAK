@@ -1,0 +1,14 @@
+#include<conio.h>
+#include<stdio.h>
+
+void main(){
+int a,b=1;
+clrscr();
+printf("Enter the number for table:\t");
+scanf("%d",&a);
+while(b<=10){
+	printf("%d x %d = %d",a,b,a*b);
+	b++;
+	}
+getch();
+}

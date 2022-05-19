@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<conio.h>
+void main(){
+int a,b=0;
+clrscr();
+printf("Enter the last number:\t");
+scanf("%d",&a);
+for(;a>=1;a--)
+	b=b+a;
+printf("Sumof the number :\t%d",b);
+getch();
+}

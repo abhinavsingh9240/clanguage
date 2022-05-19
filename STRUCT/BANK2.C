@@ -1,0 +1,87 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+
+typedef struct bank
+{
+	int accno;
+	float bal;
+	char name[10],typ[10],gen;
+}bank;
+
+void deposit()
+{
+
+}
+
+void create()
+{       bank b1;
+	FILE *f1,*f2;
+	f1=fopen("bank2.dat","rb");
+	f2=fopen("temp.dat","wb");
+	while(fread(&b1,sizeof(b1),1,f1))
+		fwrite(&b1,sizeof(b1),1,f2);
+	clrscr();
+	printf("\nEnter the details\n\n");
+	printf("Acc No.:\t");
+	scanf("%d",&b1.accno);
+	fflush(stdin);
+	printf("Name:\t");
+	gets(b1.name);
+	fflush(stdin);
+	printf("Gender:\t");
+	scanf("%c",&b1.gen);
+	fflush(stdin);
+	printf("Account type:\t");
+	gets(b1.typ);
+	b1.bal=3000;
+	fwrite(&b1,sizeof(b1),1,f2);
+	fclose(f1);
+	fclose(f2);
+	remove("bank2.dat");
+	rename("temp.dat","bank2.dat");
+
+
+}
+void main()
+{
+	int c;
+
+	while(1){
+	clrscr();
+	printf("MAIN MENU\n\n");
+	printf("1.Create account\n");
+	printf("2.Deposit money\n");
+	printf("3.Withdraw money\n");
+	printf("4.Delete account\n");
+	printf("5.Search account\n");
+	printf("6.Show all\n");
+	printf("7.exit\n");
+
+	printf("\nEnter the choice:\t");
+	scanf("%d",&c);
+	switch(c)
+	{
+		case 1:
+			create();
+			break;
+		case 2:
+			deposit();
+			break;
+		case 3:
+			break;
+		case 4:
+			break;
+		case 5:
+			break;
+		case 6:
+			break;
+		case 7:
+			exit(0);
+		default:
+			printf("Invalid Choice");
+
+	}
+	}
+	getch();
+}

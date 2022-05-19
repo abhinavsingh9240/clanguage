@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<conio.h>
+void main(){
+int a,b;
+clrscr();
+printf("Enter the number");
+scanf("%d",&a);
+printf("Enter the power:");
+scanf("%d",&b);
+for(;b>=1;b--){
+	printf("%d",b);
+	a=a*a;
+	printf("\n%d",a);}
+printf("Answer is %d",a);
+getch();
+}

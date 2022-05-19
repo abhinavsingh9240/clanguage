@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<conio.h>
+void main(){
+int a,b=2;       //THE PROGRAM IS INCOMPLETE FOR A=3
+clrscr();
+printf("Enter the number here:\t");
+scanf("%d",&a);
+a1:     if (a==1){
+		printf("the number is co prime");
+		goto a2;
+		}
+	if(b==a){
+		printf("The number is prime number");
+		goto a2;
+		}
+	if(a%b==0){
+		printf("The number is not a prime number");
+		goto a2;
+		}
+
+	b++;
+	goto a1;
+a2:
+	getch();
+}

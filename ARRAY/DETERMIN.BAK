@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+int det(int[][10],int);
+
+int main()
+{       int i,j,arr[10][10],o;
+	//clrscr();
+	system("cls");
+	printf("Enter the matrix order:\t");
+	scanf("%d",&o);
+	printf("\nEnter the matrix:\n");
+	for(i=0;i<o;i++)
+	{	for(j=0;j<o;j++)
+		{	scanf("%d",&arr[i][j]);
+		}
+	}
+	printf("\nmatrix is:-");
+	for(i=0;i<o;i++)
+	{	for(j=0;j<o;j++);
+		{	printf("%d ",arr[i][j]);
+		}
+		printf("\n");
+	}
+	//getch();
+    return 0;
+}
+int det(int arr[][10],int n);

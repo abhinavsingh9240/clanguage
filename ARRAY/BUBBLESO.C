@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<conio.h>
+
+void show(int arr[],int n)
+{       int i;
+	for(i=0;i<n;i++)
+		printf(" %d",arr[i]);
+}
+
+void main()
+{
+	int arr[]={12,54,23,4,22},l=5,i,j,c;
+	clrscr();
+	printf("initial array\n");
+	show(arr,l);
+	for(i=0;i<l;i++)
+	{
+		for(j=0;j<l-i-1;j++)
+		{
+			if(arr[j]>arr[j+1])
+			{
+				c=arr[j];
+				arr[j]=arr[j+1];
+				arr[j+1]=c;
+
+			}
+		}
+
+	}
+	printf("\nsorted array\n");
+	show(arr,l);
+	getch();
+}

@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<conio.h>
+void main(){
+int a,n,sum=0;
+clrscr();
+printf("Enter the number");
+scanf("%d",&a);
+while(a>0){
+	n=a%10;
+	sum+=n;
+	a/=10;
+	}
+printf("the sum of digit is %d",sum);
+getch();
+}

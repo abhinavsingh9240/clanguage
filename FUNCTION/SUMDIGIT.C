@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<conio.h>
+
+int sum(int a)
+{       static s=a;
+	if(a==0)
+		return 0;
+	else
+		return s%10 + sum(s/10);
+}
+
+void main()
+{  int a;
+	printf("Enter the number:\t");
+	scanf("%d",&a);
+	printf("Sum of all digit is %d ",sum(a));
+	getch();
+}
